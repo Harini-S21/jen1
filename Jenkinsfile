@@ -9,12 +9,15 @@ pipeline {
             }
         }
         stage('Push Docker Image to Minikube Docker Daemon') {
-            steps {
-                script {
-                    sh 'eval $(minikube -p minikube docker-env) && docker push simple-interest-calculator:tag'
-                }
-            }
+        steps {
+        script {
+            echo 'Setting up Minikube Docker environment'
+            sh 'eval $(minikube -p minikube docker-env)'
+            echo 'Pushing Docker image to Minikube Docker daemon'
+            sh 'docker push simple-interest-calculator:tag'
         }
+    }
+}
         stage('Deploy to Minikube') {
             steps {
                 script {
