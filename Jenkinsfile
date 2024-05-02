@@ -4,14 +4,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('simple-interset-calculator:tag')
+                    docker.build('simple-interest-calculator:tag')
                 }
             }
         }
         stage('Push Docker Image to Minikube Docker Daemon') {
             steps {
                 script {
-                    sh 'eval $(minikube docker-env) && docker push simple-interset-calculator:tag'
+                    sh 'eval $(minikube docker-env) && docker push simple-interest-calculator:tag'
                 }
             }
         }
