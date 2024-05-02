@@ -12,6 +12,7 @@ pipeline {
             steps {
                 script {
                     def minikubeEnv = sh(script: 'minikube -p minikube docker-env', returnStdout: true).trim()
+                    echo "Minikube Docker environment variables: ${minikubeEnv}"
                     sh "eval ${minikubeEnv} && docker push simple-interest-calculator:tag"
                 }
             }
