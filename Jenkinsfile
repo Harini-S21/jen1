@@ -11,7 +11,7 @@ pipeline {
         stage('Push Docker Image to Minikube Docker Daemon') {
             steps {
                 script {
-                    sh 'eval $(minikube docker-env) && docker push simple-interest-calculator:tag'
+                    sh 'eval $(minikube -p minikube docker-env) && docker push simple-interest-calculator:tag'
                 }
             }
         }
