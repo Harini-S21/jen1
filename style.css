@@ -1,0 +1,141 @@
+body {
+    font-family: 'Salsa', cursive;
+    background-color: white;
+    height: 100vh;
+    font-size: 1.3em;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  input {
+    font-size: 0.9em;
+    width: 90%;
+    font-weight: bold;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .values {
+    background-color: grey;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+  
+  }
+  
+  .trans-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-bottom: 2px solid white;
+  }
+  
+  .trans-input:focus {
+    border-bottom: 2px solid black;
+  }
+  
+  select {
+    font-size: 1em;
+    color: white;
+    border-radius: 10px;
+    background-color: black;
+    outline: none;
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  
+  select:focus {
+    border: 2px solid black;
+  }
+  
+  option {
+    border-radius: 10px;
+  }
+  
+  #calculate {
+    font-family: 'Courgette', cursive;
+    font-size: 1.4em;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 5px;
+    background-color: #24d292;
+  }
+  
+  #calculate:hover {
+    background-color: #34e3a2;
+  }
+  
+  .common {
+    margin-top: 0.8rem;
+  }
+  
+  .result {
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-weight: lighter;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 30px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .values {
+      width: 40%;
+    }
+  
+    input {
+      width: 46%;
+    }
+  
+    .row {
+      display: flex;
+    }
+  
+    select {
+      margin-left: 2rem;
+    }
+  
+    #calculate {
+      margin-left: 10rem;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+      font-size: 2em;
+    }
+  
+    input {
+      width: 60%;
+    }
+  
+    select {
+      margin-left: 1rem;
+      font-size: 1em;
+    }
+  
+    option {
+      font-size: 0.7em;
+    }
+  
+    #calculate {
+      margin-left: 7rem;
+      margin-top: 2rem;
+    }
+  }
